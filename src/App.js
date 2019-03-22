@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import PostIt from './components/PostIt'
+import React from 'react'
+import PostIt from './components/PostIts'
 
 const App = () => (
   <div>

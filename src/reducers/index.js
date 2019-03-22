@@ -1,8 +1,10 @@
 import { combineReducers, } from 'redux'
 import postits from './postits'
+import nextId from './nextId'
 
 const rootReducer = combineReducers({
-  postits
+  postits,
+  nextId,
 })
 
 export default rootReducer
