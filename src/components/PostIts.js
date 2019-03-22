@@ -3,10 +3,10 @@ import { connect, } from 'react-redux'
 
 const PostIts = ({ postits }) => (
   <div>
-    { postits.map( (p,i) => {
-      return(
-        <div key={i}>
-          {p}
+    { postits.map( p => {
+      return (
+        <div key={p.id}>
+          {p.note}
         </div>
       )
      })
