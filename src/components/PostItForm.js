@@ -25,7 +25,15 @@ class PostItForm extends React.Component {
       <div>
         <h3>New Post-It</h3>
         <form onSubmit={this.handleSubmit}>
-          <input value={note} onChange={this.handleChange} />
+          <textarea
+            type="textArea"
+            value={note}
+            onChange={this.handleChange}
+          />
+          <input
+            type="submit"
+            value="Submit"
+          />
         </form>
       </div>
     )

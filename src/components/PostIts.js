@@ -1,16 +1,12 @@
 import React from 'react'
 import { connect, } from 'react-redux'
+import PostIt from './PostIt'
 
 const PostIts = ({ postits }) => (
   <div>
-    { postits.map( p => {
-      return (
-        <div key={p.id}>
-          {p.note}
-        </div>
-      )
-     })
-    }
+{ postits.map( p =>
+      <PostIt key={p.id} {...p} />
+)}
   </div>
 )
 

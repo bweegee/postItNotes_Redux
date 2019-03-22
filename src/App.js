@@ -1,9 +1,11 @@
 import React from 'react'
-import PostIt from './components/PostIts'
+import PostIts from './components/PostIts'
+import PostItForm from './components/PostItForm'
 
 const App = () => (
   <div>
-    <PostIt />
+    <PostItForm />
+    <PostIts />
   </div>
 )
 

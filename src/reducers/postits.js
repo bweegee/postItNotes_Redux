@@ -1,9 +1,9 @@
-const postits = ( state = [], action ) => {
+const postits = (state = [], action) => {
   switch(action.type) {
     case 'POSTITS':
       return action.postits
     case 'ADD_POSTIT':
-      return [action.postits, ...state]
+      return [action.postit, ...state]
     default:
       return state
   }
