@@ -14,6 +14,10 @@ const PostIt = ({ id, note, dispatch }) => (
         icon="edit"
         color="white"
       />
+    </ActionButts>
+    <ActionButts
+      onClick={() => dispatch({ type: 'DELETE_POSTIT', id})}
+    >
       <FontAwesomeIcon
         icon="trash-alt"
         color="red"
@@ -22,6 +26,7 @@ const PostIt = ({ id, note, dispatch }) => (
   </Container>
 )
 
+// styled components
 const NoiceDiv = styled.div`
   text-align: center;
   padding: 5px;
@@ -31,7 +36,7 @@ const NoiceDiv = styled.div`
   height: 233px;
 `
 
-const ActionButts = styled.div`
+const ActionButts = styled.button`
   text-align: right;
 `
 
