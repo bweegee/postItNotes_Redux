@@ -1,6 +1,10 @@
 import React, { Fragment } from 'react'
 import { Route, Switch, } from 'react-router-dom'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTrashAlt, faEdit } from '@fortawesome/free-solid-svg-icons'
 import PostIts from './components/PostIts'
+
+library.add(faTrashAlt, faEdit);
 
 const App = () => (
   <Fragment>

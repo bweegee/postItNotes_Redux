@@ -1,18 +1,25 @@
 import React from 'react'
 import { connect, } from 'react-redux'
 import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const PostIt = ({ id, note, dispatch }) => (
-  <NoiceDiv>
-    { note }
-    <br />
-    <button>
-      Edit
-    </button>
-    <button>
-      Delete
-    </button>
-  </NoiceDiv>
+  <Container>
+    <NoiceDiv>
+      <h4>{ note }</h4>
+      <br />
+    </NoiceDiv>
+    <ActionButts>
+      <FontAwesomeIcon
+        icon="edit"
+        color="white"
+      />
+      <FontAwesomeIcon
+        icon="trash-alt"
+        color="red"
+      />
+    </ActionButts>
+  </Container>
 )
 
 const NoiceDiv = styled.div`
@@ -20,5 +27,16 @@ const NoiceDiv = styled.div`
   padding: 5px;
   border: solid 1px black
   background: #deff00;
+  width: 233px;
+  height: 233px;
+`
+
+const ActionButts = styled.div`
+  text-align: right;
+`
+
+const Container = styled.div`
+  margin: 0;
+  padding: 10px;
 `
 export default connect()(PostIt)

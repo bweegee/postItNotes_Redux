@@ -7,11 +7,14 @@ import PostItForm from './PostItForm'
 const PostIts = ({ postits }) => (
   <div>
     <PostItForm />
-    <Grid>
-      { postits.map( p =>
-        <PostIt key={p.id} {...p} />
-      )}
-    </Grid>
+    <br />
+    <BackGround>
+      <Grid>
+        { postits.map( p =>
+          <PostIt key={p.id} {...p} />
+        )}
+      </Grid>
+    </BackGround>
   </div>
 )
 
@@ -24,6 +27,10 @@ const Grid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
   grid-gap: 35px;
   white-space: pre-wrap;
+`
+
+const BackGround = styled.div`
+  background: navy;
 `
 
 export default connect(mapStateToProps)(PostIts)
