@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import { Route, Switch, } from 'react-router-dom'
 import PostIts from './components/PostIts'
-import PostItForm from './components/PostItForm'
 
 const App = () => (
-  <div>
-    <PostItForm />
-    <PostIts />
-  </div>
+  <Fragment>
+    <Switch>
+      <Route exact path='/' component={PostIts} />
+      <Route path='/postits' component={PostIts} />
+    </Switch>
+  </Fragment>
 )
 
 export default App

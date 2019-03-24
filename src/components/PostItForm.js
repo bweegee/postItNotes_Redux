@@ -30,6 +30,7 @@ class PostItForm extends React.Component {
             value={note}
             onChange={this.handleChange}
           />
+          <br />
           <input
             type="submit"
             value="Submit"
