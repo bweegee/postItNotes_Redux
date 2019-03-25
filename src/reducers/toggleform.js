@@ -1,10 +1,10 @@
 const toggleform = (toggleform = true, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'TOGGLE_FORM':
-      return !toggleform
+      return !toggleform;
     default:
-      return toggleform
+      return toggleform;
   }
-}
+};
 
 export default toggleform;

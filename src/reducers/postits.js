@@ -1,14 +1,20 @@
 const postits = (state = [], action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'POSTITS':
-      return action.postits
+      return action.postits;
     case 'ADD_POSTIT':
-      return [action.postit, ...state]
+      return [action.postit, ...state];
     case 'DELETE_POSTIT':
-      return state.filter( p => p.id !== action.id)
+      return state.filter(p => p.id !== action.id);
+    // case 'EDIT_POSTIT':
+    //   return state.map( p => {
+    //     if (p.id === action.id)
+    //       reuturn {...p, note}
+    //     return p
+    //   })
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default postits
+export default postits;
