@@ -11,6 +11,7 @@ class PostItForm extends React.Component {
     const postit = { note, id, }
     dispatch({ type: 'ADD_POSTIT', postit, })
     dispatch({ type: 'INC_ID', })
+    dispatch({ type: 'TOGGLE_FORM', })
     this.setState({ note: '', })
   }
 

@@ -9,10 +9,10 @@ const PostIt = ({ id, note, dispatch }) => (
       <h4>{ note }</h4>
       <br />
     </NoiceDiv>
+    <ButtDiv>
     <ActionButts>
       <FontAwesomeIcon
         icon="edit"
-        color="white"
       />
     </ActionButts>
     <ActionButts
@@ -23,6 +23,7 @@ const PostIt = ({ id, note, dispatch }) => (
         color="red"
       />
     </ActionButts>
+    </ButtDiv>
   </Container>
 )
 
@@ -35,9 +36,14 @@ const NoiceDiv = styled.div`
   width: 233px;
   height: 233px;
 `
+const ButtDiv = styled.div`
+  text-align: right;
+`
 
 const ActionButts = styled.button`
   text-align: right;
+  text-decoration: none;
+  border: none
 `
 
 const Container = styled.div`

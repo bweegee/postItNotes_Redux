@@ -5,29 +5,30 @@ import PostIt from './PostIt'
 import PostItForm from './PostItForm'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const PostIts = ({ postits }) => (
+const PostIts = ({ postits, toggleform, dispatch }) => (
   <div>
-    <PostItForm />
-    <AddButt>
+    {toggleform ? '' : <PostItForm /> }
+    <AddButt
+      onClick={() => dispatch({ type: 'TOGGLE_FORM' })}
+    >
       <FontAwesomeIcon
         icon="plus"
         color="green"
-        size="3x"
+        size="2x"
       />
     </AddButt>
+    <NoiceHeader>Your PostIts</NoiceHeader>
     <br />
-    <BackGround>
       <Grid>
         { postits.map( p =>
           <PostIt key={p.id} {...p} />
         )}
       </Grid>
-    </BackGround>
   </div>
 )
 
 const mapStateToProps = (state) => {
-  return { postits: state.postits, }
+  return { postits: state.postits, toggleform: state.toggleform, }
 }
 
 const Grid = styled.div`
@@ -37,8 +38,9 @@ const Grid = styled.div`
   white-space: pre-wrap;
 `
 
-const BackGround = styled.div`
-  background: navy;
+const NoiceHeader = styled.h1`
+  text-align: center;
+  color: #ff00bc;
 `
 
 const AddButt = styled.button`

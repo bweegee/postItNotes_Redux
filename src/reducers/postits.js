@@ -12,5 +12,3 @@ const postits = (state = [], action) => {
 }
 
 export default postits
-
-        // this.setState({ departments: departments.filter(d => d.id !== id), })
