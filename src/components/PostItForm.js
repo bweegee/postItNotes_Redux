@@ -36,6 +36,7 @@ class PostItForm extends React.Component {
             value="Submit"
           />
         </form>
+        <hr />
       </div>
     )
   }

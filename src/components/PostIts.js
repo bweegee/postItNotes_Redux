@@ -3,10 +3,18 @@ import { connect, } from 'react-redux'
 import styled from 'styled-components'
 import PostIt from './PostIt'
 import PostItForm from './PostItForm'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const PostIts = ({ postits }) => (
   <div>
     <PostItForm />
+    <AddButt>
+      <FontAwesomeIcon
+        icon="plus"
+        color="green"
+        size="3x"
+      />
+    </AddButt>
     <br />
     <BackGround>
       <Grid>
@@ -31,6 +39,11 @@ const Grid = styled.div`
 
 const BackGround = styled.div`
   background: navy;
+`
+
+const AddButt = styled.button`
+  background: transparent;
+  border: none;
 `
 
 export default connect(mapStateToProps)(PostIts)
